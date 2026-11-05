@@ -1,0 +1,12 @@
+{
+  "region": "Bretagne",
+  "stations": [
+    {"station_id": "07130", "name": "Rennes-Saint-Jacques", "latitude": 48.0686, "longitude": -1.7342, "elevation_m": 36},
+    {"station_id": "07110", "name": "Brest-Guipavas", "latitude": 48.4444, "longitude": -4.4122, "elevation_m": 94},
+    {"station_id": "07205", "name": "Lorient-Lann-Bihoue", "latitude": 47.7606, "longitude": -3.4400, "elevation_m": 42}
+  ],
+  "target": {"rain_threshold_mm": 1.0, "horizon_days": 1, "min_rain_hours_per_day": 18},
+  "split": {"train": 0.70, "validation": 0.15, "test": 0.15, "purge_days": 1},
+  "risk_levels": {"low_below": 0.25, "high_from": 0.55},
+  "demo": {"start": "2022-01-01", "end": "2024-12-31", "seed": 42}
+}

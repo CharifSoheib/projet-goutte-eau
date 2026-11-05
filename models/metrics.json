@@ -1,0 +1,301 @@
+{
+  "model_id": "rain_d1_logistic_20261105170016",
+  "selected_model": "logistic",
+  "data_origin": "synthetic_demo",
+  "target": "pluie_journaliere_J+1 >= 1.0 mm (cumul UTC)",
+  "features": [
+    "temp_mean",
+    "temp_range",
+    "pressure_mean",
+    "pressure_delta_24h",
+    "pressure_delta_72h",
+    "humidity_mean",
+    "wind_mean",
+    "wind_gust_max",
+    "rain_today_mm",
+    "rain_3d_mm",
+    "doy_sin",
+    "doy_cos"
+  ],
+  "splits": {
+    "train": {
+      "start": "2022-01-01",
+      "end": "2024-02-05",
+      "n": 2298,
+      "positive_rate": 0.3494
+    },
+    "validation": {
+      "start": "2024-02-07",
+      "end": "2024-07-18",
+      "n": 489,
+      "positive_rate": 0.2924
+    },
+    "test": {
+      "start": "2024-07-20",
+      "end": "2024-12-30",
+      "n": 492,
+      "positive_rate": 0.313
+    }
+  },
+  "chosen_hyperparameters": {
+    "logistic": {
+      "C": 1.0
+    },
+    "hist_gb": {
+      "max_depth": 2,
+      "max_iter": 100
+    }
+  },
+  "validation": {
+    "climatologie": {
+      "n": 489,
+      "positive_rate": 0.2924,
+      "threshold": 0.25,
+      "accuracy": 0.5869,
+      "precision": 0.3815,
+      "recall": 0.6643,
+      "f1": 0.4847,
+      "roc_auc": 0.6066,
+      "brier": 0.2005,
+      "log_loss": 0.588,
+      "confusion": {
+        "tn": 192,
+        "fp": 154,
+        "fn": 48,
+        "tp": 95
+      }
+    },
+    "persistance": {
+      "n": 489,
+      "positive_rate": 0.2924,
+      "threshold": 0.24,
+      "accuracy": 0.7198,
+      "precision": 0.5208,
+      "recall": 0.5245,
+      "f1": 0.5226,
+      "roc_auc": 0.6625,
+      "brier": 0.1867,
+      "log_loss": 0.558,
+      "confusion": {
+        "tn": 277,
+        "fp": 69,
+        "fn": 68,
+        "tp": 75
+      }
+    },
+    "logistic": {
+      "n": 489,
+      "positive_rate": 0.2924,
+      "threshold": 0.3,
+      "accuracy": 0.7137,
+      "precision": 0.5069,
+      "recall": 0.7692,
+      "f1": 0.6111,
+      "roc_auc": 0.7952,
+      "brier": 0.1579,
+      "log_loss": 0.4842,
+      "confusion": {
+        "tn": 239,
+        "fp": 107,
+        "fn": 33,
+        "tp": 110
+      }
+    },
+    "hist_gb": {
+      "n": 489,
+      "positive_rate": 0.2924,
+      "threshold": 0.31,
+      "accuracy": 0.7055,
+      "precision": 0.4977,
+      "recall": 0.7413,
+      "f1": 0.5955,
+      "roc_auc": 0.7888,
+      "brier": 0.1598,
+      "log_loss": 0.488,
+      "confusion": {
+        "tn": 239,
+        "fp": 107,
+        "fn": 37,
+        "tp": 106
+      }
+    }
+  },
+  "test": {
+    "climatologie": {
+      "n": 492,
+      "positive_rate": 0.313,
+      "threshold": 0.25,
+      "accuracy": 0.372,
+      "precision": 0.3312,
+      "recall": 0.987,
+      "f1": 0.4959,
+      "roc_auc": 0.6825,
+      "brier": 0.1978,
+      "log_loss": 0.5817,
+      "confusion": {
+        "tn": 31,
+        "fp": 307,
+        "fn": 2,
+        "tp": 152
+      },
+      "brier_skill_score_vs_climatology": 0.0
+    },
+    "persistance": {
+      "n": 492,
+      "positive_rate": 0.313,
+      "threshold": 0.24,
+      "accuracy": 0.6972,
+      "precision": 0.5163,
+      "recall": 0.513,
+      "f1": 0.5147,
+      "roc_auc": 0.647,
+      "brier": 0.1969,
+      "log_loss": 0.5806,
+      "confusion": {
+        "tn": 264,
+        "fp": 74,
+        "fn": 75,
+        "tp": 79
+      },
+      "brier_skill_score_vs_climatology": 0.0046
+    },
+    "logistic": {
+      "n": 492,
+      "positive_rate": 0.313,
+      "threshold": 0.3,
+      "accuracy": 0.7317,
+      "precision": 0.5509,
+      "recall": 0.7727,
+      "f1": 0.6432,
+      "roc_auc": 0.8208,
+      "brier": 0.156,
+      "log_loss": 0.4729,
+      "confusion": {
+        "tn": 241,
+        "fp": 97,
+        "fn": 35,
+        "tp": 119
+      },
+      "brier_skill_score_vs_climatology": 0.2113
+    },
+    "hist_gb": {
+      "n": 492,
+      "positive_rate": 0.313,
+      "threshold": 0.31,
+      "accuracy": 0.7439,
+      "precision": 0.5673,
+      "recall": 0.7662,
+      "f1": 0.6519,
+      "roc_auc": 0.8155,
+      "brier": 0.159,
+      "log_loss": 0.4834,
+      "confusion": {
+        "tn": 248,
+        "fp": 90,
+        "fn": 36,
+        "tp": 118
+      },
+      "brier_skill_score_vs_climatology": 0.1962
+    }
+  },
+  "test_ci95_selected": {
+    "roc_auc_ci95": [
+      0.7856,
+      0.8579
+    ],
+    "brier_ci95": [
+      0.1399,
+      0.1719
+    ],
+    "f1_ci95": [
+      0.5879,
+      0.6999
+    ]
+  },
+  "calibration_test": {
+    "mean_predicted": [
+      0.0493,
+      0.1048,
+      0.1522,
+      0.2195,
+      0.2985,
+      0.399,
+      0.5567,
+      0.769
+    ],
+    "observed_frequency": [
+      0.0323,
+      0.0164,
+      0.1129,
+      0.3279,
+      0.2787,
+      0.4516,
+      0.541,
+      0.7419
+    ]
+  },
+  "permutation_importance": [
+    {
+      "feature": "temp_mean",
+      "importance": 6e-05,
+      "std": 5e-05
+    },
+    {
+      "feature": "temp_range",
+      "importance": -0.00083,
+      "std": 0.00024
+    },
+    {
+      "feature": "pressure_mean",
+      "importance": 0.00694,
+      "std": 0.00167
+    },
+    {
+      "feature": "pressure_delta_24h",
+      "importance": 0.02186,
+      "std": 0.00467
+    },
+    {
+      "feature": "pressure_delta_72h",
+      "importance": -2e-05,
+      "std": 0.00015
+    },
+    {
+      "feature": "humidity_mean",
+      "importance": 0.02011,
+      "std": 0.00318
+    },
+    {
+      "feature": "wind_mean",
+      "importance": 0.00287,
+      "std": 0.00221
+    },
+    {
+      "feature": "wind_gust_max",
+      "importance": 0.00243,
+      "std": 0.00095
+    },
+    {
+      "feature": "rain_today_mm",
+      "importance": 0.00111,
+      "std": 0.00071
+    },
+    {
+      "feature": "rain_3d_mm",
+      "importance": -8e-05,
+      "std": 9e-05
+    },
+    {
+      "feature": "doy_sin",
+      "importance": 7e-05,
+      "std": 5e-05
+    },
+    {
+      "feature": "doy_cos",
+      "importance": 0.01096,
+      "std": 0.00208
+    }
+  ],
+  "trained_at": "2026-11-05T17:00:16+00:00",
+  "warning": "DONNEES SYNTHETIQUES : scores non representatifs d'une performance reelle"
+}
